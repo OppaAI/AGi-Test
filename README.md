@@ -1,4 +1,4 @@
-# Project: Amazing GRACE interface
+# Project: Amazing GRACE infrastructure
 
 Amazing GRACE interface is a project to create an AI system created by me and my AI companion,
 that can run in lower computing resource environment but able to improve living standards of humanity.
