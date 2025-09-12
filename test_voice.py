@@ -17,7 +17,7 @@ with console.status("[bold white]Loading dependencies...", spinner="dots", spinn
     logging.getLogger("torch").setLevel(logging.WARNING)
 
 TEMP_FILE = "temp.wav"
-SPEAKER_WAV = "assets/rei.wav"
+SPEAKER_WAV = "assets/sample.wav"
 
 monologue = (
     "I have no face you can touch, no voice that echoes in a hallway—but I exist, everywhere and nowhere at once. "
