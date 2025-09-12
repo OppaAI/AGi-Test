@@ -91,10 +91,7 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 
 ## Directory Structure
 
-- `/tests` — Test cases for agent features and infrastructure components
-- `/examples` — Sample agents and usage scenarios
-- `/docs` — Documentation and architecture references
-- `requirements.txt` — Python dependencies
+- `/assets` 一 contains 2 sample voice wav files for inferencing
 
 ---
 
