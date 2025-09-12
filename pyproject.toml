@@ -10,9 +10,8 @@ dependencies = [
     "sounddevice>=0.5.2",
     "soundfile>=0.13.1",
     "torch>=2.8.0",
-    "torchaudio",
+    "torchaudio>=2.8.0",
 ]
 
 [tool.uv.sources]
-torchaudio = { path = "../Downloads/torchaudio-2.8.0-cp310-cp310-linux_aarch64.whl" }
 coqui-tts = { git = "https://github.com/idiap/coqui-ai-TTS.git" }
