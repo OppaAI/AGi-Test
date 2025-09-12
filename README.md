@@ -73,8 +73,8 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 
 2. **Environment Setup:**
    - Ensure you have Python 3.10+ installed.
-   - pip install uv
-     ```
+   - Install uv:
+     ```pip install uv
 
 3. **Install Dependencies:**
    ```sh
