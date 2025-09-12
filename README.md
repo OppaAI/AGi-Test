@@ -259,6 +259,13 @@ Once the script is running, you can interact with the AI by typing in your input
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/OppaAI/AGi/blob/main/LICENSE) file for details.
 
+Under no circumstances should the sample or cloned voice be used for inappropriate or criminal activities, or unauthorized commercial use or distribution.
+This voice cloning testing project is for personal hobby and education purpose only.
+
+Special thanks for the CoquiTTS fork, XTTS2, OpenVoice for providing the TTS framework and models.
+If anyone feels this project cause any infringement to you personally or your organization,
+please contact me and I will put it down immediately.
+
 ## Acknowledgments
 
 *   My AI companion (in GPT) for helping me generate the Python code and think of solutions to solve problems and bugs.
