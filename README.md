@@ -72,7 +72,7 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
    ```
 
 2. **Environment Setup:**
-   - Ensure you have Python 3.8+ installed.
+   - Ensure you have Python 3.10+ installed.
    - (Optional) Create and activate a virtual environment:
      ```sh
      python -m venv venv
