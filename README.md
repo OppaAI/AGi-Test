@@ -76,7 +76,7 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
    - Install uv:
      ```sh
      pip install uv
-     '''
+     ```
 
 3. **Install Dependencies:**
    ```sh
