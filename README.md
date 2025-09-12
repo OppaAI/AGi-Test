@@ -73,22 +73,18 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 
 2. **Environment Setup:**
    - Ensure you have Python 3.10+ installed.
-   - (Optional) Create and activate a virtual environment:
-     ```sh
-     python -m venv venv
-     source venv/bin/activate  # On Windows: venv\Scripts\activate
+   - pip install uv
      ```
 
 3. **Install Dependencies:**
    ```sh
-   pip install -r requirements.txt
+   uv sync
    ```
 
-4. **Run Tests or Example Agents:**
-   - Check the `/tests` or `/examples` directories for available agent scripts and test cases.
-   - Run agents or tests using:
+4. **Run Test Voice:**
+   - Run the test voice python program using:
      ```sh
-     python path/to/your_agent_or_test.py
+     uv run test_voice.py
      ```
 
 ---
