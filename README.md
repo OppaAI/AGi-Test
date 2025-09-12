@@ -96,7 +96,7 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 - `/assets` 一 contains 2 sample voice wav files for inferencing
 
 Copyright statement: Under no circumstances should the sample or cloned voice be used for inappropriate or criminal activities, or unauthorized commercial use or distribution.
-This test project is for personal hobby and education purpose only.
+This voice cloning testing project is for personal hobby and education purpose only.
 
 ---
 
