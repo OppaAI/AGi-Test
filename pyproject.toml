@@ -1,0 +1,18 @@
+[project]
+name = "agi-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "coqui-tts[ja]",
+    "rich>=14.1.0",
+    "sounddevice>=0.5.2",
+    "soundfile>=0.13.1",
+    "torch>=2.8.0",
+    "torchaudio",
+]
+
+[tool.uv.sources]
+torchaudio = { path = "../Downloads/torchaudio-2.8.0-cp310-cp310-linux_aarch64.whl" }
+coqui-tts = { git = "https://github.com/idiap/coqui-ai-TTS.git" }
