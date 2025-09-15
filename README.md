@@ -23,7 +23,13 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 
 ## Core Features
 
-### Voice AI Testing (`test_voice.py`)
+### Voice Chatbot Testing (`test_chatbot.py`)
+- Provides tests or demonstrations for the chatbot functionality.
+- Using Ollama local LLM for chatbot (Model used: Gemma3:4B-tools)
+- Maintain chat history until exit
+- TTS using online Google TTS (gTTS)
+
+### Voice AI Testing (`test_tts.py`)
 - Advanced text-to-speech (TTS) and voice conversion capabilities
 - Speaker cloning and voice conversion
 - Audio processing: resampling, pitch and speed adjustment
@@ -67,7 +73,8 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 4. **Running the Components:**
    - For voice testing:
      ```sh
-     uv run test_voice.py
+     uv run test_chatbot.py
+     uv run test_tts.py
      ```
    - For function-oriented chatbot:
      ```sh
