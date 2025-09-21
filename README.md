@@ -9,7 +9,7 @@
 
 ## Overview
 
-AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the development and validation of advanced AI agent capabilities. The project is part of the OppaAI ecosystem and acts as a sandbox for testing new features and functionalities.
+AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the development and validation of advanced AI agent capabilities. The project is part of the OppaAI ecosystem and acts as a sandbox for rapid prototyping.
 
 - **Purpose:**  
   To enable rapid prototyping and evaluation of new features for the Amazing GRACE cognitive engine, focusing on agent communication, reasoning, and interaction.
@@ -24,10 +24,26 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 ## Core Features
 
 ### Voice Chatbot Testing (`test_chatbot.py`)
-- Provides tests or demonstrations for the chatbot functionality.
-- Using Ollama local LLM for chatbot (Model used: Gemma3:4B-tools)
-- Maintain chat history until exit
-- TTS using online Google TTS (gTTS)
+
+- Demonstrates and tests voice-enabled chatbot functionality using local LLM inference and custom TTS.
+- Uses the Ollama Python module with the Gemma3-Code-Reasoning-4B model for conversational AI.
+- Persona is set as a gentle, caring Japanese companion that always responds in Japanese (no translations, romanization, or English output).
+- Maintains chat history for the session.
+- Integrates KokoroEngine and TextToAudioStream for advanced neural TTS, supporting two different blended voice profiles (Neutral and ASMR).
+- Blends multiple voice models using PyTorch for more natural speech synthesis.
+- Supports real-time and asynchronous audio responses, saving conversation audio as `.wav` files.
+- All logic is contained in a chat loop, allowing interactive conversation until the user types "exit".
+- Example features:
+  - Customizable system prompt/persona
+  - Real-time streaming assistant response
+  - Japanese-only output
+  - Voice blending and playback
+  - Session-based chat history
+
+Requirements:
+- Ollama Python module (with Gemma3 model pulled)
+- KokoroEngine and speech models in `../models/voice_engine/`
+- PyTorch and compatible CUDA environment (for neural voice blending)
 
 ### Voice AI Testing (`test_tts.py`)
 - Advanced text-to-speech (TTS) and voice conversion capabilities
