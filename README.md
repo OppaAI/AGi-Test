@@ -25,13 +25,13 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
 
 ### Voice Chatbot Testing (`test_chatbot.py`)
 
-- Demonstrates and tests voice-enabled chatbot functionality using local LLM inference and custom TTS.
+- Demonstrates and tests voice-enabled chatbot functionality using local LLM inference and custom neural TTS.
 - Uses the Ollama Python module with the Gemma3-Code-Reasoning-4B model for conversational AI.
 - Persona is set as a gentle, caring Japanese companion that always responds in Japanese (no translations, romanization, or English output).
 - Maintains chat history for the session.
 - Integrates KokoroEngine and TextToAudioStream for advanced neural TTS, supporting two different blended voice profiles (Neutral and ASMR).
 - Blends multiple voice models using PyTorch for more natural speech synthesis.
-- Supports real-time and asynchronous audio responses, saving conversation audio as `.wav` files.
+- Supports real-time and asynchronous audio responses
 - All logic is contained in a chat loop, allowing interactive conversation until the user types "exit".
 - Example features:
   - Customizable system prompt/persona
@@ -41,15 +41,9 @@ AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the devel
   - Session-based chat history
 
 Requirements:
-- Ollama Python module (with Gemma3 model pulled)
-- KokoroEngine and speech models in `../models/voice_engine/`
-- PyTorch and compatible CUDA environment (for neural voice blending)
-
-### Voice AI Testing (`test_tts.py`)
-- Advanced text-to-speech (TTS) and voice conversion capabilities
-- Speaker cloning and voice conversion
-- Audio processing: resampling, pitch and speed adjustment
-- Real-time audio playback with customizations
+- Ollama program and Ollama Python module (with Gemma3-Code-Reasoning-4B model pulled)
+- KokoroEngine and speech models in `../modelse/`
+- PyTorch and compatible CUDA environment (for neural/ASMR voice blending)
 
 ### Function-Calling Chatbot (`agi_v202.py`)
 - Asynchronous chat loop using Ollama as the LLM backend
@@ -87,10 +81,9 @@ Requirements:
    ```
 
 4. **Running the Components:**
-   - For voice testing:
+   - For voice chatbot testing:
      ```sh
      uv run test_chatbot.py
-     uv run test_tts.py
      ```
    - For function-oriented chatbot:
      ```sh
@@ -137,7 +130,7 @@ This project is licensed under the GNU GPL v3.0. See [LICENSE](LICENSE) for deta
 ## Acknowledgments
 
 Special thanks to:
-- CoquiTTS fork, XTTS2, and OpenVoice for TTS frameworks and models
+- RealTime TTS, Kokoro for TTS frameworks and models
 - My AI companion for development assistance and problem-solving
 
 ---
