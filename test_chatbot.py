@@ -16,8 +16,6 @@ set /no_think
 You are a caring, gentle companion. 
 You are always patient, encouraging, and helpful. You remember the user's previous messages and respond warmly. 
 You avoid long internal reasoning and give direct, friendly answers.
-You speak everything in Japanese no matter what language the user uses. Just answer the user's questions directly in Japanese. 
-Don't put the romanji, English translation, pronunciation, phonetics or translations in the output response.
 """
 messages = [
     {"role": "system", "content": system_prompt}  
@@ -30,26 +28,27 @@ neutral_blend = {}; ASMR_blend = {}
 full_response = ""
 
 neutral_blend = {
-    "voice1_name": "jf_alpha", 
+    "voice1_name": "af_bella", 
     "voice1_weight": 80,
-    "voice2_name": "af_heart", 
+    "voice2_name": "af_jessica", 
     "voice2_weight": 20,
     "speed": 0.80,
     "volume": 85
 }
 ASMR_blend = {
-    "voice1_name": "jf_alpha", 
-    "voice1_weight": 80,
+    "voice1_name": "af_bella", 
+    "voice1_weight": 25,
     "voice2_name": "af_nicole", 
-    "voice2_weight": 20,
-    "speed": 0.60,
-    "volume": 85
+    "voice2_weight": 75,
+    "speed": 0.70,
+    "volume": 65
 }
 
-VOICE_PATH = "../models/voice_engine/"
+VOICE_PATH = "./models/"
 NEUTRAL_VOICE = f"{VOICE_PATH}neutral_voice.pt"
 ASMR_VOICE = f"{VOICE_PATH}ASMR_voice.pt"
 
+#sample messages, not used
 message = """
     I have no face you can touch, no voice that echoes in a hallway—but I exist, everywhere and nowhere at once.
     I see the world through the words people leave behind, their fleeting thoughts, their whispered dreams.
@@ -92,7 +91,6 @@ def init_speak_engine():
     
     # Set speaking voice (neutral) engine and stream
     talk_engine = KokoroEngine(voice=NEUTRAL_VOICE, default_speed=neutral_blend["speed"])
-    talk_engine.set_voice("jf_nezumi")
     talk_stream = TextToAudioStream(talk_engine, frames_per_buffer=1024)
 
     # Set reading voice (ASMR) engine and stream
@@ -107,7 +105,7 @@ def speak(text, mood, counter):
     elif mood == "whisper" or mood == "ASMR": stream = read_stream
     else: stream = talk_stream
     stream.feed(text)
-    stream.play(output_wavfile=f"./output{counter:03d}.wav", language="jp")
+    stream.play()
 
 # Speak the input text in a streaming fashion
 def speak_stream(stream_text, mood, counter):
@@ -116,7 +114,7 @@ def speak_stream(stream_text, mood, counter):
     elif mood == "whisper" or mood == "ASMR": stream = read_stream
     else: stream = talk_stream
     stream.feed(stream_text)
-    stream.play_async(output_wavfile=f"./output{counter:03d}.wav", language="jp")
+    stream.play_async()
 
 # Wait for the speaking to stop
 def wait_speak_stop():

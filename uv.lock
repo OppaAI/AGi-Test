@@ -31,8 +31,9 @@ dependencies = [
     { name = "ml-dtypes" },
     { name = "ollama" },
     { name = "onnxruntime-gpu" },
+    { name = "pip" },
     { name = "pyttsx3" },
-    { name = "realtimetts", extra = ["kokoro"] },
+    { name = "realtimetts", extra = ["jp", "kokoro"] },
     { name = "rich" },
     { name = "sounddevice" },
     { name = "soundfile" },
@@ -48,8 +49,9 @@ requires-dist = [
     { name = "ml-dtypes", specifier = "==0.5.3" },
     { name = "ollama", specifier = ">=0.5.3" },
     { name = "onnxruntime-gpu", path = "../Downloads/onnxruntime_gpu-1.23.0-cp310-cp310-linux_aarch64.whl" },
+    { name = "pip", specifier = ">=25.2" },
     { name = "pyttsx3", specifier = ">=2.99" },
-    { name = "realtimetts", extras = ["kokoro"], specifier = ">=0.5.7" },
+    { name = "realtimetts", extras = ["jp", "kokoro"], specifier = ">=0.5.7" },
     { name = "rich", specifier = ">=13.9.4" },
     { name = "sounddevice", specifier = ">=0.5.2" },
     { name = "soundfile", specifier = ">=0.13.1" },
@@ -484,6 +486,20 @@ wheels = [
 ]
 
 [[package]]
+name = "cutlet"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "fugashi" },
+    { name = "jaconv" },
+    { name = "mojimoji" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ae/f0/a873f5f7066166aaff2557f875130aecb5417fa5db429633219e5c7cd558/cutlet-0.5.0.tar.gz", hash = "sha256:5e8435ba2a46d3b4aa2468f7be6a39da3c33dcfafe8c5c7f976df343eb189927", size = 412479, upload-time = "2025-01-04T07:56:12.682Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4c/cd/72d711472e32ef9e22fdf63c053254ec64ef4a9f281a87dcb52fee53c503/cutlet-0.5.0-py3-none-any.whl", hash = "sha256:183eef14b2587c5f2058208e1df50112105fe68c14d0fa938f7ccd283e255232", size = 11803, upload-time = "2025-01-04T07:56:17.33Z" },
+]
+
+[[package]]
 name = "cycler"
 version = "0.12.1"
 source = { registry = "https://pypi.org/simple" }
@@ -696,6 +712,22 @@ http = [
 ]
 
 [[package]]
+name = "fugashi"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/33/69/bb037690c3cc218a139ae89afaf0b099814e7aff570b28577aa0ef1a06f0/fugashi-1.4.0.tar.gz", hash = "sha256:443880fa975defc3194f524fbd6cdbcd32776fa66d573d07ccec9edb76cd5271", size = 339049, upload-time = "2024-11-11T11:52:14.045Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/09/2b/efa795594845f8e83023c458939cb3a375f60e6df69b9fda9ee310b2d6a3/fugashi-1.4.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:0a2221232176244ff983b03d29a80b3be0768ef708405fb5f7629cf250386698", size = 561640, upload-time = "2024-11-11T12:02:40.002Z" },
+    { url = "https://files.pythonhosted.org/packages/0e/f5/74043811e993b7e49d32020acab38f20862136680c05b6dd20d51075c995/fugashi-1.4.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:70940296be946ea9dc3a0d6608f9f5cfb19d18693573634083e50aed5ae09edd", size = 506703, upload-time = "2024-11-11T12:02:42.011Z" },
+    { url = "https://files.pythonhosted.org/packages/11/0c/3645ce322717916620678b3eb9f2d631b90bc64e3d3980be72102f8d03d6/fugashi-1.4.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:d7aaa73e5c1614e9a4d50d8f3975727fcc01f318ff45fc000f2c4e4d96f2927a", size = 502265, upload-time = "2024-11-11T12:02:43.625Z" },
+    { url = "https://files.pythonhosted.org/packages/55/c3/d7656d48bd866bac61f71d7bf5374054c6a54bcf453249a95fed9db44cc1/fugashi-1.4.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:26679c754cdcb1683911b3de5c6c13d99eb47d962f98da0872fb0eb80cb278d1", size = 653527, upload-time = "2024-11-11T12:15:44.219Z" },
+    { url = "https://files.pythonhosted.org/packages/e3/a5/74bba09a8873ab2fd9403987ccaf55c48c720242633ee53c93c7feb17a26/fugashi-1.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fd19fa1b3d4965ef162801cd554b82b10dbe0344f094fb3375ff064c11c24478", size = 671706, upload-time = "2024-11-11T11:53:33.563Z" },
+    { url = "https://files.pythonhosted.org/packages/18/eb/3aa7e7b23c9d475549f39dd1ce1d429abcbdfbfd2872ff16660644f46737/fugashi-1.4.0-cp310-cp310-win_amd64.whl", hash = "sha256:c2eaafda887d1e7c41e1c332888e075459bf3ef74fdb474286671ac2033acaa5", size = 512056, upload-time = "2024-11-11T11:52:31.49Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/2e/bf504baac3f24a0caf0b0ef2aea42adeb12723c14f71edc024b128838c49/fugashi-1.4.0-pp310-pypy310_pp73-macosx_10_15_x86_64.whl", hash = "sha256:4348142a8edfbbaefc6d4d11ee28de375bcb8e347a86908356ec4245d17fe259", size = 494973, upload-time = "2024-11-11T12:03:06.052Z" },
+    { url = "https://files.pythonhosted.org/packages/e3/da/5b56f789d47ab8ba35e871c4f4c188364c72ed5b0c3df022e63d4f4b2407/fugashi-1.4.0-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:334793ca17a81c3fcea0ca2edf10bd5fcd9bc59cf8c99572003d76172d9e352d", size = 492219, upload-time = "2024-11-11T12:03:08.116Z" },
+]
+
+[[package]]
 name = "grpcio"
 version = "1.75.0"
 source = { registry = "https://pypi.org/simple" }
@@ -900,6 +932,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce
 wheels = [
     { url = "https://files.pythonhosted.org/packages/15/aa/0aca39a37d3c7eb941ba736ede56d689e7be91cab5d9ca846bde3999eba6/isodate-0.7.2-py3-none-any.whl", hash = "sha256:28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15", size = 22320, upload-time = "2024-10-08T23:04:09.501Z" },
 ]
+
+[[package]]
+name = "jaconv"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d2/e1/670cefc7f00b0e1890e114a37a98ea425f7e06131342aeb9636856ac663c/jaconv-0.4.0.tar.gz", hash = "sha256:32da74b247f276e09a52d6b35c153df2387965cb85a6f034cc8af21d446f8161", size = 17402, upload-time = "2024-07-25T16:35:24.75Z" }
 
 [[package]]
 name = "jinja2"
@@ -1213,6 +1251,18 @@ wheels = [
 ]
 
 [[package]]
+name = "mecab-python3"
+version = "1.0.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/02/6a7146d3a4b4a47fb4c67346e25624cbcd72cefbe6d08107b1449e262abc/mecab-python3-1.0.6.tar.gz", hash = "sha256:16f38ace484020bd3446a10054829678c1e7b97f1740b58b00a31d595cff025e", size = 77662, upload-time = "2022-12-06T13:34:33.997Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a4/9c/9e5f7068e50419e6d02d164343c7dc52c0ad1d5217be57fdc9164d18e2e1/mecab_python3-1.0.6-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:0fb9f5a06f9cd9c5724608956128b91f5330248a78e9de322a0abd5beaba24a3", size = 274288, upload-time = "2022-12-06T13:35:48.995Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/ee/7f6fc3e83920ee639b738607581a4ac32bd05461fcd6f1637eece9e3d2b9/mecab_python3-1.0.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6c99ec5f5581e4b56c8b68b4eeac4c6b59c6de12e66a2cfe4b1c6f8e87d38bd7", size = 560172, upload-time = "2022-12-06T13:58:37.276Z" },
+    { url = "https://files.pythonhosted.org/packages/94/1a/86a50a8b295d50d26567269fdc5c368c76d62e8363bc23ace0aa64aac5d2/mecab_python3-1.0.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:30177272efa6ba26909b540e3816659c9f93ee49a5cc2b8ea47c17eff05c686b", size = 581644, upload-time = "2022-12-06T13:36:06.642Z" },
+    { url = "https://files.pythonhosted.org/packages/42/13/f6da78d5832d7333e761406ccf731a99c6ab19be97ef3a6e636a91bfa53c/mecab_python3-1.0.6-cp310-cp310-win_amd64.whl", hash = "sha256:fd10ba05f94dea7fe5e281336b7a4d07f79062c25139077d935833d0db303450", size = 501315, upload-time = "2022-12-06T13:38:21.974Z" },
+]
+
+[[package]]
 name = "misaki"
 version = "0.9.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1247,6 +1297,20 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/1d/ac/e002d12ae19136e25bb41c7d14d7e1a1b08f3c0e99a44455ff6339796507/ml_dtypes-0.5.3-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:0cd5a6c711b5350f3cbc2ac28def81cd1c580075ccb7955e61e9d8f4bfd40d24", size = 4960702, upload-time = "2025-07-29T18:38:19.616Z" },
     { url = "https://files.pythonhosted.org/packages/dd/12/79e9954e6b3255a4b1becb191a922d6e2e94d03d16a06341ae9261963ae8/ml_dtypes-0.5.3-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bdcf26c2dbc926b8a35ec8cbfad7eff1a8bd8239e12478caca83a1fc2c400dc2", size = 4933471, upload-time = "2025-07-29T18:38:21.809Z" },
     { url = "https://files.pythonhosted.org/packages/d5/aa/d1eff619e83cd1ddf6b561d8240063d978e5d887d1861ba09ef01778ec3a/ml_dtypes-0.5.3-cp310-cp310-win_amd64.whl", hash = "sha256:aecbd7c5272c82e54d5b99d8435fd10915d1bc704b7df15e4d9ca8dc3902be61", size = 206330, upload-time = "2025-07-29T18:38:23.663Z" },
+]
+
+[[package]]
+name = "mojimoji"
+version = "0.0.13"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/08/fb/ee22357cd7622fb879fac575feaffc54469ed9a0c1d9073355b1ebc62b7f/mojimoji-0.0.13.tar.gz", hash = "sha256:0e6d2fba22cc8bf132a5bdf3a964296d9287a618d09681a12868f0fd518e4230", size = 5010, upload-time = "2024-01-12T10:38:30.532Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cd/4e/0d7f019386bc4feb8096b5e8150d2e2dadd377be178d950654830541b5a3/mojimoji-0.0.13-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4e35fed7eb8ac573eef365d4a614c952179ad4e0e27a8e32d22e6c57a945b8c", size = 52307, upload-time = "2024-01-12T10:37:43.499Z" },
+    { url = "https://files.pythonhosted.org/packages/99/9c/7d28ec5236094b54130bcc34c3ff00185a8ed15e4bf76ac5c601bb2b831d/mojimoji-0.0.13-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:308a6b43c3c9c5a6d912e1984d02aa58ccabb83c9e57c5edb71389c90187d6d3", size = 48501, upload-time = "2024-01-12T10:37:45.275Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/cd/0169f6a70c1a6fd64bace30b8890752c9c04cb723fbe393d671910f014e7/mojimoji-0.0.13-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:761c1bcca7146b24c82b72645fbb80dbe6d373792e84f7d71bafa538c0b170af", size = 188360, upload-time = "2024-01-12T10:37:46.327Z" },
+    { url = "https://files.pythonhosted.org/packages/06/59/44c8ce532482f7c49871157603594050eddf1e53b01041baf2d5d70c0809/mojimoji-0.0.13-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8feb1b8bf21eae1c35fca72a8c2c05c9a12271d882a02b01608d746d3dbab684", size = 192418, upload-time = "2024-01-12T10:37:47.565Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/c0/1489a243721d26c55b1f679b18338f85103c94464c847d52c0dbeb6acc0a/mojimoji-0.0.13-cp310-cp310-win32.whl", hash = "sha256:f617ebe1fdceadc2b87497c4d56f3c863155179488feb63f83a62cf95df37b69", size = 39824, upload-time = "2024-01-12T10:37:49.386Z" },
+    { url = "https://files.pythonhosted.org/packages/f1/4c/df80f497c30065aa1c0d4bb6a9001042468dc04c8c86ab1dd7e8fe6debf0/mojimoji-0.0.13-cp310-cp310-win_amd64.whl", hash = "sha256:a5dfcef1fc16360aab65b8b60518a9d19cc7916ffc296ee0907819490686429e", size = 43748, upload-time = "2024-01-12T10:37:50.331Z" },
 ]
 
 [[package]]
@@ -1659,6 +1723,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/3b/8e/5c9d410f9217b12320efc7c413e72693f48468979a013ad17fd690397b9a/pillow-11.3.0-pp310-pypy310_pp73-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:527b37216b6ac3a12d7838dc3bd75208ec57c1c6d11ef01902266a5a0c14fc27", size = 4957166, upload-time = "2025-07-01T09:16:13.74Z" },
     { url = "https://files.pythonhosted.org/packages/62/bb/78347dbe13219991877ffb3a91bf09da8317fbfcd4b5f9140aeae020ad71/pillow-11.3.0-pp310-pypy310_pp73-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:be5463ac478b623b9dd3937afd7fb7ab3d79dd290a28e2b6df292dc75063eb8a", size = 5581482, upload-time = "2025-07-01T09:16:16.107Z" },
     { url = "https://files.pythonhosted.org/packages/d9/28/1000353d5e61498aaeaaf7f1e4b49ddb05f2c6575f9d4f9f914a3538b6e1/pillow-11.3.0-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:8dc70ca24c110503e16918a658b869019126ecfe03109b754c402daff12b3d9f", size = 6984596, upload-time = "2025-07-01T09:16:18.07Z" },
+]
+
+[[package]]
+name = "pip"
+version = "25.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/20/16/650289cd3f43d5a2fadfd98c68bd1e1e7f2550a1a5326768cddfbcedb2c5/pip-25.2.tar.gz", hash = "sha256:578283f006390f85bb6282dffb876454593d637f5d1be494b5202ce4877e71f2", size = 1840021, upload-time = "2025-07-30T21:50:15.401Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/3f/945ef7ab14dc4f9d7f40288d2df998d1837ee0888ec3659c813487572faa/pip-25.2-py3-none-any.whl", hash = "sha256:6d67a2b4e7f14d8b31b8b52648866fa717f45a1eb70e83002f4331d07e953717", size = 1752557, upload-time = "2025-07-30T21:50:13.323Z" },
 ]
 
 [[package]]
@@ -4113,6 +4186,16 @@ wheels = [
 ]
 
 [[package]]
+name = "pyopenjtalk"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/63/5e/50434a22f5c20ed1e562f4d7edbb7b1b04853abc185b9ac12dea18b02006/pyopenjtalk-0.4.0.tar.gz", hash = "sha256:eb66fa5daba56a865c44fb78ee31851a1f6d3dce0d48198b9e5af15b7d55c0bb", size = 1397964, upload-time = "2025-01-22T11:03:28.683Z" }
+
+[[package]]
 name = "pyparsing"
 version = "3.2.4"
 source = { registry = "https://pypi.org/simple" }
@@ -4259,6 +4342,19 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+jp = [
+    { name = "cutlet" },
+    { name = "fugashi" },
+    { name = "jaconv" },
+    { name = "mecab-python3" },
+    { name = "mojimoji" },
+    { name = "pyaudio" },
+    { name = "pydub" },
+    { name = "pyopenjtalk" },
+    { name = "resampy" },
+    { name = "stream2sentence" },
+    { name = "unidic-lite" },
+]
 kokoro = [
     { name = "kokoro" },
     { name = "pyaudio" },
@@ -4968,6 +5064,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/8b/2e/c14812d3d4d9cd177
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/14/e2a54fabd4f08cd7af1c07030603c3356b74da07f7cc056e600436edfa17/tzlocal-5.3.1-py3-none-any.whl", hash = "sha256:eb1a66c3ef5847adf7a834f1be0800581b683b5608e74f86ecbcef8ab91bb85d", size = 18026, upload-time = "2025-03-05T21:17:39.857Z" },
 ]
+
+[[package]]
+name = "unidic-lite"
+version = "1.0.8"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/55/2b/8cf7514cb57d028abcef625afa847d60ff1ffbf0049c36b78faa7c35046f/unidic-lite-1.0.8.tar.gz", hash = "sha256:db9d4572d9fdd4d00a97949d4b0741ec480ee05a7e7e2e32f547500dae27b245", size = 47356746, upload-time = "2021-01-25T06:07:54.719Z" }
 
 [[package]]
 name = "uritemplate"
