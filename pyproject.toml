@@ -5,13 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
-    "coqui-tts[ja]",
+    "coqui-tts>=0.27.1",
     "gtts>=2.5.4",
     "kokoro-onnx[gpu]>=0.4.9",
+    "ml-dtypes==0.5.3",
     "ollama>=0.5.3",
+    "onnxruntime-gpu",
     "pyttsx3>=2.99",
     "realtimetts[kokoro]>=0.5.7",
-    "rich>=14.1.0",
+    "rich>=13.9.4",
     "sounddevice>=0.5.2",
     "soundfile>=0.13.1",
     "torch>=2.8.0",
@@ -19,4 +21,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-coqui-tts = { git = "https://github.com/idiap/coqui-ai-TTS.git" }
+onnxruntime-gpu = { path = "../Downloads/onnxruntime_gpu-1.23.0-cp310-cp310-linux_aarch64.whl" }
