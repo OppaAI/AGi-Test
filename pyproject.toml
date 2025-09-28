@@ -5,15 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
-    "coqui-tts>=0.27.1",
+    "deepspeed>=0.17.6",
     "gtts>=2.5.4",
     "kokoro-onnx[gpu]>=0.4.9",
+    "micropygps",
     "ml-dtypes==0.5.3",
     "ollama>=0.5.3",
     "onnxruntime-gpu",
     "pip>=25.2",
-    "pyttsx3>=2.99",
-    "realtimetts[jp,kokoro]>=0.5.7",
+    "pyserial>=3.5",
+    "realtimetts[all,jp,kokoro]>=0.5.7",
     "rich>=13.9.4",
     "sounddevice>=0.5.2",
     "soundfile>=0.13.1",
@@ -23,3 +24,4 @@ dependencies = [
 
 [tool.uv.sources]
 onnxruntime-gpu = { path = "../Downloads/onnxruntime_gpu-1.23.0-cp310-cp310-linux_aarch64.whl" }
+micropygps = { git = "https://github.com/inmcm/micropyGPS.git" }
