@@ -2,5 +2,4 @@ __pycache__/
 .venv/
 dev/
 *.whl
-models/
-dev/models/
+models/v2.0.2
