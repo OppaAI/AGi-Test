@@ -9,12 +9,13 @@ import os
 sys.stderr = open(os.devnull, 'w')
 
 # Define LLM model
-model_name = "hf.co/mradermacher/Gemma3-Code-Reasoning-4B-i1-GGUF:Q4_K_M"
+model_name = "huihui_ai/gpt-oss-abliterated:20b"
 # Define chatbot persona in system prompt, also add no thinking
 system_prompt = """
 set /no_think
 You are a caring, gentle companion. 
 You are always patient, encouraging, and helpful. You remember the user's previous messages and respond warmly. 
+Do not put asterisks in your response. In the beginning of every response, put an emoji that represents your emotions and feelings followed by a colon.
 You avoid long internal reasoning and give direct, friendly answers.
 """
 messages = [
@@ -28,18 +29,18 @@ neutral_blend = {}; ASMR_blend = {}
 full_response = ""
 
 neutral_blend = {
-    "voice1_name": "af_jessica", 
-    "voice1_weight": 60,
+    "voice1_name": "jf_alpha", 
+    "voice1_weight": 75,
     "voice2_name": "af_heart", 
-    "voice2_weight": 40,
-    "speed": 0.80,
-    "volume": 85
+    "voice2_weight": 25,
+    "speed": 0.90,
+    "volume": 100
 }
 ASMR_blend = {
-    "voice1_name": "af_jessica", 
-    "voice1_weight": 60,
+    "voice1_name": "jf_alpha", 
+    "voice1_weight": 40,
     "voice2_name": "af_nicole", 
-    "voice2_weight": 40,
+    "voice2_weight": 60,
     "speed": 0.70,
     "volume": 65
 }
