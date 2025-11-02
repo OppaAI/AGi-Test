@@ -161,10 +161,14 @@ The voice cloning and synthesis features are strictly for **personal, educationa
 ## 🙏 Acknowledgments
 
 Special thanks to:
+- [RealtimeTTS](https://github.com/KoljaB/RealtimeTTS) - Real-time audio streaming library
 - [Kokoro](https://github.com/remsky/Kokoro-JVSX) - Neural TTS framework
 - [Coqui TTS](https://github.com/coqui-ai/TTS) - Open-source text-to-speech
 - [Ollama](https://ollama.ai) - Local LLM inference
 - [Moondream](https://github.com/vikhyat/moondream) - Vision model
+- [DuckDuckGo Search](https://github.com/duckduckgo) - Web search API
+- [OpenCV](https://github.com/opencv/opencv) - Computer vision library
+- [Transformers](https://github.com/huggingface/transformers) - Pre-trained models]
 - The open-source AI community
 
 ---
