@@ -168,7 +168,7 @@ Special thanks to:
 - [Moondream](https://github.com/vikhyat/moondream) - Vision model
 - [DuckDuckGo Search](https://github.com/duckduckgo) - Web search API
 - [OpenCV](https://github.com/opencv/opencv) - Computer vision library
-- [Transformers](https://github.com/huggingface/transformers) - Pre-trained models]
+- [Transformers](https://github.com/huggingface/transformers) - Pre-trained models
 - The open-source AI community
 
 ---
