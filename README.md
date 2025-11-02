@@ -1,138 +1,172 @@
 # AGi-Test
 
-**Project:** Amazing GRACE Infrastructure (Test-section)  
-**Repository:** [OppaAI/AGi-Test](https://github.com/OppaAI/AGi-Test)  
-**License:** GNU General Public License v3.0  
-**Main Language:** Python
+A testbed for the **Amazing GRACE Infrastructure**, enabling rapid prototyping and validation of advanced AI agent capabilities. Part of the [OppaAI](https://github.com/OppaAI) ecosystem.
 
----
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)
 
-## Overview
+## 🎯 Overview
 
-AGi-Test is a testbed for the Amazing GRACE infrastructure, supporting the development and validation of advanced AI agent capabilities. The project is part of the OppaAI ecosystem and acts as a sandbox for rapid prototyping.
+AGi-Test is a sandbox environment for developing and testing cutting-edge AI agent features, with a focus on:
 
-- **Purpose:**  
-  To enable rapid prototyping and evaluation of new features for the Amazing GRACE cognitive engine, focusing on agent communication, reasoning, and interaction.
+- **Voice-Enabled AI** - Japanese-speaking companions with neural TTS and voice blending
+- **Function-Calling Agents** - LLM-powered chatbots with external tool integration
+- **Multimodal AI** - Computer vision and real-time visual understanding
+- **Local LLM Inference** - Privacy-first AI using Ollama and open-source models
 
-- **Key Topics:**  
-  - Adaptive AI
-  - AI Agents & Chatbots
-  - Voice AI & Cognitive Engines
-  - Generative AI
-  - Reasoning and Analytics
+## ✨ Features
 
-## Core Features
+### 🎤 Voice Chatbot (`kokoro_chatbot.py` / `coqui_chatbot.py`)
 
-### Voice Chatbot Testing (`test_chatbot.py`)
+Interactive voice-based AI companion with advanced speech synthesis:
 
-- Demonstrates and tests voice-enabled chatbot functionality using local LLM inference and custom neural TTS.
-- Uses the Ollama Python module with the Gemma3-Code-Reasoning-4B model for conversational AI.
-- Persona is set as a gentle, caring Japanese companion that always responds in Japanese (no translations, romanization, or English output).
-- Maintains chat history for the session.
-- Integrates KokoroEngine and TextToAudioStream for advanced neural TTS, supporting two different blended voice profiles (Neutral and ASMR).
-- Blends multiple voice models using PyTorch for more natural speech synthesis.
-- Supports real-time and asynchronous audio responses
-- All logic is contained in a chat loop, allowing interactive conversation until the user types "exit".
-- Example features:
-  - Customizable system prompt/persona
-  - Real-time streaming assistant response
-  - Japanese-only output
-  - Voice blending and playback
+- **LLM Backend**: Ollama with Gemma3-Code-Reasoning-4B
+- **TTS Engine**: Kokoro or Coqui with neural voice blending
+- **Persona**: Customizable Japanese-speaking companion
+- **Voice Profiles**: Neutral and ASMR voice blending using PyTorch
+- **Features**:
+  - Real-time streaming responses
   - Session-based chat history
+  - Japanese-only output mode
+  - Multi-voice synthesis and blending
+  - Interactive chat loop (type "exit" to quit)
 
-Requirements:
-- Ollama program and Ollama Python module (with Gemma3-Code-Reasoning-4B model pulled)
-- KokoroEngine and speech models in `../modelse/`
-- PyTorch and compatible CUDA environment (for neural/ASMR voice blending)
+**Requirements**:
+- Ollama with Gemma3-Code-Reasoning-4B model
+- Kokoro/Coqui TTS models in `/models`
+- CUDA-compatible GPU (recommended for voice blending)
 
-### Function-Calling Chatbot (`agi_v202.py`)
-- Asynchronous chat loop using Ollama as the LLM backend
-- Integrated external tools:
-  - DuckDuckGo search
-  - Weather lookup
-  - Aurora forecast
-  - Current date/time retrieval
-- Tool-call response handling with chat history
+### 🔧 Function-Calling Chatbot (`archive/agi_v202.py`)
 
-### Multimodal AI (`agi_v203.py`)
-- Computer vision integration with Moondream2 vision model
-- Webcam support for real-time visual input
-- Object detection and scene understanding
-- Combined text and image-based interactions
+Async chatbot with integrated external tools:
 
-## Getting Started
+- **Tools**: DuckDuckGo search, weather lookup, aurora forecasts, date/time
+- **Architecture**: Async chat loop with tool-call handling
+- **Memory**: Persistent chat history per session
 
-1. **Clone the Repository:**
-   ```sh
-   git clone https://github.com/OppaAI/AGi-Test.git
-   cd AGi-Test
-   ```
+### 👁️ Multimodal AI (`archive/agi_v203.py`)
 
-2. **Environment Setup:**
-   - Ensure Python 3.10+ is installed
-   - Install uv:
-     ```sh
-     pip install uv
-     ```
+Computer vision integration for real-time scene understanding:
 
-3. **Install Dependencies:**
-   ```sh
-   uv sync
-   ```
+- **Vision Model**: Moondream2
+- **Input**: Webcam or image files
+- **Capabilities**: Object detection, scene analysis, visual reasoning
+- **Interaction**: Combined text and image-based queries
 
-4. **Running the Components:**
-   - For voice chatbot testing:
-     ```sh
-     uv run test_chatbot.py
-     ```
-   - For function-oriented chatbot:
-     ```sh
-     python agi_v202.py
-     ```
-   - For multimodal AI with webcam:
-     ```sh
-     python agi_v203.py
-     ```
+## 🚀 Quick Start
 
-## Directory Structure
+### Prerequisites
 
-- `/assets` - Contains sample voice wav files for inferencing
+- Python 3.10 or higher
+- [Ollama](https://ollama.ai) installed and running
+- NVIDIA GPU with CUDA support (optional but recommended)
 
-## Dependencies
+### Installation
 
-- ollama - Go framework for running and managing LLMs
-- duckduckgo_search - Web search integration
-- geopy - Geocoding services
-- transformers - Pre-trained models and object detection
-- opencv-python - Real-time computer vision
-- Pillow - Image processing
-- matplotlib - Data visualization
+```bash
+# Clone the repository
+git clone https://github.com/OppaAI/AGi-Test.git
+cd AGi-Test
 
-## Future Development
+# Install dependencies
+pip install -r requirements.txt
 
-- Implement comprehensive error handling and logging
-- Add database storage for conversation history
-- Enable dynamic model selection
-- Develop flexible persona management
-- Expand tool and functionality set
+# Or use uv for faster installation
+pip install uv
+uv sync
+```
 
-## Related Projects
+### Running the Chatbots
+
+```bash
+# Voice chatbot with Kokoro TTS
+python kokoro_chatbot.py
+
+# Voice chatbot with Coqui TTS
+python coqui_chatbot.py
+
+# Function-calling chatbot (archived)
+python archive/agi_v202.py
+
+# Multimodal AI with webcam (archived)
+python archive/agi_v203.py
+```
+
+## 📁 Project Structure
+
+```
+AGi-Test/
+├── kokoro_chatbot.py          # Main voice chatbot (Kokoro TTS)
+├── coqui_chatbot.py           # Alternative voice chatbot (Coqui TTS)
+├── requirements.txt           # Python dependencies
+├── models/                    # Pre-trained voice models
+│   ├── neutral_voice.pt
+│   ├── ASMR_voice.pt
+│   └── [other voice models]
+├── assets/                    # Sample audio and metadata
+│   ├── sample.wav
+│   ├── bender.wav
+│   └── *.json
+└── archive/                   # Previous implementations
+    ├── agi_v202.py           # Function-calling chatbot
+    ├── agi_v203.py           # Multimodal AI
+    └── eye.py                # Vision system
+```
+
+## 🔧 Key Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| `ollama` | Local LLM inference |
+| `kokoro` / `coqui-tts` | Neural text-to-speech |
+| `torch` | Deep learning framework |
+| `transformers` | Pre-trained models |
+| `opencv-python` | Computer vision |
+| `realtimetts` | Real-time audio streaming |
+| `duckduckgo-search` | Web search integration |
+
+See `requirements.txt` for the complete dependency list.
+
+## 🎓 Use Cases
+
+- **AI Companion Development** - Build and test voice-based AI assistants
+- **Voice Synthesis Research** - Experiment with neural TTS and voice blending
+- **Agent Prototyping** - Rapidly develop and validate new agent capabilities
+- **Multimodal AI** - Combine language and vision for richer interactions
+- **Privacy-First AI** - Run everything locally without cloud dependencies
+
+## 🔮 Future Roadmap
+
+- [ ] Comprehensive error handling and logging
+- [ ] Database storage for conversation history
+- [ ] Dynamic model selection and switching
+- [ ] Flexible persona management system
+- [ ] Extended tool ecosystem
+- [ ] Web UI for easier interaction
+- [ ] Model fine-tuning capabilities
+
+## 📚 Related Projects
 
 - [OppaAI/AGi](https://github.com/OppaAI/AGi) — Main AGi project
-- [OppaAI/MCP-Client](https://github.com/OppaAI/MCP-Client) — MCP Client
+- [OppaAI/MCP-Client](https://github.com/OppaAI/MCP-Client) — MCP Client implementation
 
-## Legal and License
+## ⚖️ License & Legal
 
-This project is licensed under the GNU GPL v3.0. See [LICENSE](LICENSE) for details.
+This project is licensed under the **GNU General Public License v3.0**. See [LICENSE](LICENSE) for details.
 
-**Important Notice:** The voice cloning features are strictly for personal, educational, and hobby purposes only. Any use for inappropriate, criminal, or unauthorized commercial activities is strictly prohibited.
+### ⚠️ Important Notice
 
-## Acknowledgments
+The voice cloning and synthesis features are strictly for **personal, educational, and hobby purposes only**. Any use for inappropriate, criminal, or unauthorized commercial activities is strictly prohibited.
+
+## 🙏 Acknowledgments
 
 Special thanks to:
-- RealTime TTS, Kokoro for TTS frameworks and models
-- My AI companion for development assistance and problem-solving
+- [Kokoro](https://github.com/remsky/Kokoro-JVSX) - Neural TTS framework
+- [Coqui TTS](https://github.com/coqui-ai/TTS) - Open-source text-to-speech
+- [Ollama](https://ollama.ai) - Local LLM inference
+- [Moondream](https://github.com/vikhyat/moondream) - Vision model
+- The open-source AI community
 
 ---
 
-For more information, visit the [OppaAI GitHub page](https://github.com/OppaAI).
+**Questions or contributions?** Visit the [OppaAI GitHub](https://github.com/OppaAI) or open an issue!
