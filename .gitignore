@@ -1,5 +1,6 @@
 __pycache__/
 .venv/
+.vscode/
 dev/
 *.whl
 models/v2.0.2
