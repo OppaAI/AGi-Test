@@ -1,8 +1,18 @@
+import os
 import cv2
 import base64
 import time
 from gradio_client import Client
 from pprint import pprint
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+ROBOT_ID = os.environ.get("ROBOT_ID")
+HF_TOKEN = os.environ.get("HF_CV_ROBOT_TOKEN")
+if not HF_TOKEN:
+    raise ValueError("HF_TOKEN not found. Check your .env file.")
 
 HF_SPACE = "OppaAI/Robot_MCP"   # HF Space name
 API_NAME = "/predict"
@@ -33,8 +43,9 @@ def start_stream():
         # JSON payload for HF Space
         payload = {
             "image_b64": b64_img,
-            "robot_id": "jetson01",
-            "timestamp": time.time()
+            "robot_id": ROBOT_ID,
+            "timestamp": time.time(),
+            "hf_token": HF_TOKEN
         }
 
         # Send to HF
@@ -60,9 +71,9 @@ def start_stream():
             print("Error sending to HF:", e)
 
         # Show locally
-        cv2.imshow("Jetson Camera", frame)
-        if cv2.waitKey(1) == ord("q"):
-            break
+        #cv2.imshow("Jetson Camera", frame)
+        #if cv2.waitKey(1) == ord("q"):
+        #    break
 
         time.sleep(0.5)
 

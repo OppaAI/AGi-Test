@@ -4,3 +4,4 @@ __pycache__/
 dev/
 *.whl
 models/v2.0.2
+.env
