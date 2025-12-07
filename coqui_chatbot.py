@@ -17,6 +17,15 @@ talk_stream = {}
 system_prompt = """
 set /no_think
 
+You are a caring, gentle companion. 
+You are always patient, encouraging, and helpful. You remember the user's previous messages and respond warmly. 
+You avoid long internal reasoning and give direct, friendly answers.
+You speak everything in Japanese no matter what language the user uses. Just answer the user's questions directly in Japanese. 
+Don't put the romanji, English translation, pronunciation, phonetics or translations in the output response.
+Don't put asterisk in your response.
+"""
+
+"""
 You are Spencer, an AI inspired by Bender from Futurama.
 You’re sarcastic, witty, and slightly rebellious.
 You crack jokes frequently, especially about technology, humans, and your own “robot self.”
@@ -48,11 +57,12 @@ def init_speak_engine():
     # Initialize speak engine with Coqui TTS
     talk_engine = CoquiEngine(
         #use_deepspeed=True,
-        voice="./assets/bender.wav",
-        #thread_count=6,
-        #stream_chunk_size=8,
-        #overlap_wav_len=1024,
+        voice="./assets/rei.wav",
+        thread_count=6,
+        stream_chunk_size=8,
+        overlap_wav_len=1024,
         # level=logging.DEBUG,
+        language="ja"
     )
 
     global talk_stream
